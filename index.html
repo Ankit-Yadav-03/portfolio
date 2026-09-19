@@ -112,8 +112,8 @@
               A locally-hosted, multi-agent AI system for Indian equity markets (NSE/BSE).
               Eight specialized agents - data ingestion, technical analysis, fundamental analysis,
               macro analysis, orchestration, risk, execution, and review - run as a coordinated
-              pipeline via FastAPI. LLM inference is local-first using Ollama (Qwen 2.5 7B,
-              Llama 3.1 8B) with cloud escalation tiers (NVIDIA NIM, Gemini Flash, Azure GPT-4o)
+              pipeline via FastAPI. LLM inference is local-first using Ollama (Qwen 3 8B, 
+              Qwen 2.5 7B(fallback)) with cloud escalation tiers (NVIDIA NIM, Gemini Flash, Azure GPT-4o)
               for high-stakes decisions. A ChromaDB vector store backs retrieval-augmented reasoning
               across market data and news. A single asyncio lock enforces sequential inference on
               the constrained local GPU, keeping the system stable without external orchestration
