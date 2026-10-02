@@ -7,7 +7,7 @@
   <meta name="description" content="Ankit Yadav. Backend engineering, AI/LLM integration, agentic systems - Python, FastAPI, PostgreSQL." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -25,7 +25,6 @@
 
   <main>
 
-    <!-- Hero -->
     <section id="home" class="hero reveal">
       <h1>Ankit Yadav</h1>
       <p class="role">
@@ -53,7 +52,6 @@
       </div>
     </section>
 
-    <!-- About -->
     <section id="about" class="section reveal">
       <h2>About</h2>
       <div class="about-grid">
@@ -95,13 +93,10 @@
       </div>
     </section>
 
-    <!-- Projects -->
     <section id="projects" class="section reveal">
       <h2>Projects</h2>
 
       <div class="projects-list">
-
-        <!-- 1. NSE Trading Agent -->
         <article class="project">
           <div class="project-main">
             <div class="project-head">
@@ -112,8 +107,8 @@
               A locally-hosted, multi-agent AI system for Indian equity markets (NSE/BSE).
               Eight specialized agents - data ingestion, technical analysis, fundamental analysis,
               macro analysis, orchestration, risk, execution, and review - run as a coordinated
-              pipeline via FastAPI. LLM inference is local-first using Ollama (Qwen 3 8B, 
-              Qwen 2.5 7B(fallback)) with cloud escalation tiers (NVIDIA NIM, Gemini Flash, Azure GPT-4o)
+              pipeline via FastAPI. LLM inference is local-first using Ollama (Qwen 3 8B,
+              Qwen 2.5 7B fallback) with cloud escalation tiers (NVIDIA NIM, Gemini Flash, Azure GPT-4o)
               for high-stakes decisions. A ChromaDB vector store backs retrieval-augmented reasoning
               across market data and news. A single asyncio lock enforces sequential inference on
               the constrained local GPU, keeping the system stable without external orchestration
@@ -131,7 +126,6 @@
           </div>
         </article>
 
-        <!-- 2. StreamGuard -->
         <article class="project">
           <div class="project-main">
             <div class="project-head">
@@ -156,7 +150,6 @@
           </div>
         </article>
 
-        <!-- 3. Krayadhi -->
         <article class="project">
           <div class="project-main">
             <div class="project-head">
@@ -179,7 +172,6 @@
           </div>
         </article>
 
-        <!-- 4. Peakpilot  -->
         <article class="project">
           <div class="project-main">
             <div class="project-head">
@@ -203,7 +195,6 @@
           </div>
         </article>
 
-        <!-- 5. Receivables Copilot -->
         <article class="project">
           <div class="project-main">
             <div class="project-head">
@@ -225,42 +216,88 @@
             </div>
           </div>
         </article>
-
       </div>
     </section>
 
-    <!-- Skills -->
     <section id="skills" class="section reveal">
       <h2>Skills</h2>
       <div class="skills-grid">
         <div class="skill-group">
           <h4>Languages</h4>
-          <p>Python, JavaScript, SQL, C, C++, HTML, CSS</p>
+          <ul class="skill-list">
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+            <li>C</li>
+            <li>C++</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
         </div>
+
         <div class="skill-group">
           <h4>Backend</h4>
-          <p>FastAPI, REST APIs, WebSockets, AsyncIO, Multi-tenant architecture, Auth &amp; session management, Row-level security</p>
+          <ul class="skill-list">
+            <li>FastAPI</li>
+            <li>REST APIs</li>
+            <li>WebSockets</li>
+            <li>AsyncIO</li>
+            <li>Multi-tenant architecture</li>
+            <li>Auth &amp; session management</li>
+            <li>Row-level security</li>
+          </ul>
         </div>
+
         <div class="skill-group">
           <h4>AI &amp; Agentic Systems</h4>
-          <p>LLM integration (Ollama, Gemini, OpenAI), RAG pipelines, ChromaDB, Multi-agent orchestration, Playwright scraping</p>
+          <ul class="skill-list">
+            <li>LLM integration</li>
+            <li>Ollama</li>
+            <li>Gemini</li>
+            <li>OpenAI</li>
+            <li>RAG pipelines</li>
+            <li>ChromaDB</li>
+            <li>Multi-agent orchestration</li>
+            <li>Playwright scraping</li>
+          </ul>
         </div>
+
         <div class="skill-group">
           <h4>Frontend</h4>
-          <p>Next.js, Tailwind CSS, Vanilla JS, Responsive design</p>
+          <ul class="skill-list">
+            <li>Next.js</li>
+            <li>Tailwind CSS</li>
+            <li>Vanilla JS</li>
+            <li>Responsive design</li>
+          </ul>
         </div>
+
         <div class="skill-group">
           <h4>Data &amp; ML</h4>
-          <p>PostgreSQL, SQLite, Supabase, NumPy, Pandas, scikit-learn</p>
+          <ul class="skill-list">
+            <li>PostgreSQL</li>
+            <li>SQLite</li>
+            <li>Supabase</li>
+            <li>NumPy</li>
+            <li>Pandas</li>
+            <li>scikit-learn</li>
+          </ul>
         </div>
+
         <div class="skill-group">
           <h4>Infra &amp; Tools</h4>
-          <p>Git, GitHub, Docker, Vercel, Render, Google Cloud Run</p>
+          <ul class="skill-list">
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Docker</li>
+            <li>Vercel</li>
+            <li>Render</li>
+            <li>Google Cloud Run</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="section reveal">
       <h2>Get in touch</h2>
       <p class="about-text">Open to backend, Python, and AI-focused internships and freelance opportunities.</p>
@@ -276,6 +313,7 @@
   <footer>
     <p>© 2026 Ankit Yadav</p>
   </footer>
-    <script src="script.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
