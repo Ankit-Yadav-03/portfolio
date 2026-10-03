@@ -65,6 +65,9 @@ const setActiveSection = () => {
   });
 };
 
+
+/* ─── Scroll Performance ─── */
+
 let scrollTicking = false;
 
 window.addEventListener(
@@ -88,7 +91,8 @@ window.addEventListener(
 
 navLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
-    const target = document.querySelector(link.getAttribute("href"));
+    const href = link.getAttribute("href");
+    const target = href ? document.querySelector(href) : null;
 
     if (!target) return;
 
@@ -99,7 +103,7 @@ navLinks.forEach((link) => {
       block: "start"
     });
 
-    history.replaceState(null, "", link.getAttribute("href"));
+    history.replaceState(null, "", href);
   });
 });
 
@@ -112,7 +116,7 @@ const updateScrollProgress = () => {
 
   const progress =
     scrollHeight > 0
-      ? (window.scrollY / scrollHeight) * 100
+      ? Math.min((window.scrollY / scrollHeight) * 100, 100)
       : 0;
 
   document.documentElement.style.setProperty(
@@ -130,17 +134,63 @@ if (terminal && !prefersReducedMotion) {
   terminal.addEventListener("pointermove", (event) => {
     const rect = terminal.getBoundingClientRect();
 
-    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
-    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
+    const normalizedX =
+      ((event.clientX - rect.left) / rect.width - 0.5) * 2;
 
-    terminal.style.setProperty("--mouse-x", `${x * 4}px`);
-    terminal.style.setProperty("--mouse-y", `${y * 4}px`);
+    const normalizedY =
+      ((event.clientY - rect.top) / rect.height - 0.5) * 2;
+
+    terminal.style.setProperty(
+      "--mouse-x",
+      `${normalizedX * 3}px`
+    );
+
+    terminal.style.setProperty(
+      "--mouse-y",
+      `${normalizedY * 3}px`
+    );
+
+    terminal.style.setProperty(
+      "--rotate-x",
+      `${normalizedX * 0.45}deg`
+    );
+
+    terminal.style.setProperty(
+      "--rotate-y",
+      `${normalizedY * -0.45}deg`
+    );
   });
 
   terminal.addEventListener("pointerleave", () => {
     terminal.style.setProperty("--mouse-x", "0px");
     terminal.style.setProperty("--mouse-y", "0px");
+    terminal.style.setProperty("--rotate-x", "0deg");
+    terminal.style.setProperty("--rotate-y", "0deg");
   });
+}
+
+
+/* ─── Project Hover State ─── */
+
+const projects = document.querySelectorAll(".project:not(.project-featured)");
+
+projects.forEach((project) => {
+  project.addEventListener("mouseenter", () => {
+    project.classList.add("is-hovered");
+  });
+
+  project.addEventListener("mouseleave", () => {
+    project.classList.remove("is-hovered");
+  });
+});
+
+
+/* ─── Dynamic Footer Year ─── */
+
+const yearElement = document.getElementById("year");
+
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
 }
 
 
