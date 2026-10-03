@@ -3,17 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0C0D0E" />
   <title>Ankit Yadav - Backend & AI Systems Engineer</title>
-  <meta name="description" content="Ankit Yadav. Backend engineering, AI/LLM integration, agentic systems - Python, FastAPI, PostgreSQL." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta
+    name="description"
+    content="Ankit Yadav. Backend engineering, AI/LLM integration, agentic systems - Python, FastAPI, PostgreSQL."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
   <header>
-    <nav>
+    <nav aria-label="Primary navigation">
       <a href="#home" class="logo">ankit<span>.</span>yadav</a>
+
       <ul>
         <li><a href="#about">about</a></li>
         <li><a href="#projects">projects</a></li>
@@ -25,35 +35,72 @@
 
   <main>
 
+    <!-- ─── Hero ─── -->
     <section id="home" class="hero reveal">
+
+      <div class="hero-eyebrow">
+        <span class="status-dot"></span>
+        backend · AI systems · agentic infrastructure
+      </div>
+
       <h1>Ankit Yadav</h1>
+
       <p class="role">
-        Backend &amp; AI systems - <span class="hi">Python, FastAPI, LLMs, agentic pipelines</span><br>
-        and the infrastructure that makes them run in production.
+        I build <span class="hi">backend systems and AI infrastructure</span>
+        for real-world problems - from multi-agent market systems to
+        production-oriented APIs and decision infrastructure.
       </p>
 
-      <div class="terminal">
+      <div class="terminal" aria-label="Engineering profile terminal">
         <div class="terminal-bar">
-          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="terminal-title">ankit@systems:~</span>
         </div>
+
         <div class="terminal-body">
           <p><span class="prompt">$</span> whoami</p>
           <p class="out">second-year B.Tech IT @ DTU - backend systems &amp; agentic AI since 2025</p>
+
           <p><span class="prompt">$</span> stack</p>
           <p class="out">python · fastapi · sql · asyncio · llm integration · rest APIs</p>
+
           <p><span class="prompt">$</span> strongest_at</p>
           <p class="out">backend dev · agentic AI · API design · system architecture · automation</p>
+
+          <p><span class="prompt">$</span> status<span class="cursor"></span></p>
+          <p class="out">building systems, shipping projects, learning from production constraints</p>
         </div>
       </div>
 
       <div class="hero-links">
-        <a href="#projects" class="btn">View projects</a>
-        <a href="https://github.com/ankit-yadav-03" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
+        <a href="#projects" class="btn">View projects <span>↓</span></a>
+        <a
+          href="https://github.com/ankit-yadav-03"
+          class="btn btn-ghost"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub ↗
+        </a>
       </div>
+
+      <div class="hero-scroll-hint">
+        <span class="scroll-line"></span>
+        <span>scroll to explore</span>
+      </div>
+
     </section>
 
+
+    <!-- ─── About ─── -->
     <section id="about" class="section reveal">
-      <h2>About</h2>
+      <div class="section-heading">
+        <span class="section-index">01</span>
+        <h2>About</h2>
+      </div>
+
       <div class="about-grid">
         <p class="about-text">
           I'm a second-year Information Technology student at Delhi Technological University.
@@ -61,6 +108,7 @@
           but things with real constraints: multi-tenant data isolation, regulatory tariff math,
           async scraping pipelines, and multi-agent orchestration on constrained hardware.
         </p>
+
         <p class="about-text">
           Every project here is independently built and fully my own - the architecture decisions,
           the code, and the mistakes. I'm early in my career and I know it. What I can show is
@@ -68,7 +116,8 @@
         </p>
       </div>
 
-      <div class="stack-bar">
+      <div class="stack-bar" aria-label="Core technology stack">
+        <span class="stack-label">core stack</span>
         <span class="stack-tag strong">Python</span>
         <span class="stack-tag strong">FastAPI</span>
         <span class="stack-tag strong">SQL</span>
@@ -82,8 +131,8 @@
         <span class="stack-tag">RAG</span>
         <span class="stack-tag">Ollama</span>
         <span class="stack-tag">ChromaDB</span>
-        <span class="stack-tag" strong>Vercel</span>
-        <span class="stack-tag" strong>Render</span>
+        <span class="stack-tag">Vercel</span>
+        <span class="stack-tag">Render</span>
         <span class="stack-tag">Docker</span>
         <span class="stack-tag">Git</span>
         <span class="stack-tag">Web Scraping</span>
@@ -93,16 +142,33 @@
       </div>
     </section>
 
+
+    <!-- ─── Projects ─── -->
     <section id="projects" class="section reveal">
-      <h2>Projects</h2>
+      <div class="section-heading">
+        <span class="section-index">02</span>
+        <h2>Selected Systems</h2>
+      </div>
 
       <div class="projects-list">
-        <article class="project">
+
+        <!-- Featured / Star Project -->
+        <article class="project project-featured">
+
+          <div class="featured-label">
+            <span class="featured-marker"></span>
+            flagship project
+          </div>
+
           <div class="project-main">
             <div class="project-head">
-              <h3>NSE Trading Agent</h3>
+              <div>
+                <h3>NSE Trading Agent</h3>
+                <p class="project-kicker">Multi-agent market intelligence &amp; decision system</p>
+              </div>
               <span class="badge badge-amber">Private repo</span>
             </div>
+
             <p class="project-desc">
               A locally-hosted, multi-agent AI system for Indian equity markets (NSE/BSE).
               Eight specialized agents - data ingestion, technical analysis, fundamental analysis,
@@ -114,24 +180,67 @@
               the constrained local GPU, keeping the system stable without external orchestration
               infrastructure.
             </p>
+
+            <div class="architecture">
+              <div class="architecture-node">
+                <span>01</span>
+                <strong>Data</strong>
+                <small>market + news</small>
+              </div>
+              <span class="architecture-arrow">→</span>
+              <div class="architecture-node">
+                <span>02</span>
+                <strong>Analysis</strong>
+                <small>technical · fundamental · macro</small>
+              </div>
+              <span class="architecture-arrow">→</span>
+              <div class="architecture-node">
+                <span>03</span>
+                <strong>Orchestration</strong>
+                <small>risk · execution · review</small>
+              </div>
+              <span class="architecture-arrow">→</span>
+              <div class="architecture-node">
+                <span>04</span>
+                <strong>Decision</strong>
+                <small>controlled output</small>
+              </div>
+            </div>
+
             <ul class="tags">
-              <li>Python</li><li>FastAPI</li><li>Ollama</li><li>RAG / ChromaDB</li>
-              <li>Agentic AI</li><li>AsyncIO</li><li>SQLite</li><li>NSE/BSE</li>
+              <li>Python</li>
+              <li>FastAPI</li>
+              <li>Ollama</li>
+              <li>RAG / ChromaDB</li>
+              <li>Agentic AI</li>
+              <li>AsyncIO</li>
+              <li>SQLite</li>
+              <li>NSE/BSE</li>
             </ul>
           </div>
+
           <div class="project-side">
+            <div class="project-number">01</div>
             <div class="project-links">
               <span class="link-disabled">Private - happy to walk through on request</span>
             </div>
           </div>
+
         </article>
 
+
+        <!-- StreamGuard -->
         <article class="project">
+
           <div class="project-main">
             <div class="project-head">
-              <h3>StreamGuard</h3>
+              <div>
+                <h3>StreamGuard</h3>
+                <p class="project-kicker">Self-hosted LLM streaming control plane</p>
+              </div>
               <span class="badge badge-active">Open source</span>
             </div>
+
             <p class="project-desc">
               A self-hosted control plane for LLM token streaming. Sits between model and client
               to halt token production the moment a user disconnects - eliminating silent token burn,
@@ -139,89 +248,164 @@
               (produced ≥ committed ≥ consumed) and emits per-stream receipts with full lifecycle
               timestamps, covered by unit and integration tests against a live Ollama backend.
             </p>
+
             <ul class="tags">
-              <li>Python</li><li>FastAPI</li><li>WebSocket</li><li>AsyncIO</li><li>Ollama</li><li>Docker</li>
+              <li>Python</li>
+              <li>FastAPI</li>
+              <li>WebSocket</li>
+              <li>AsyncIO</li>
+              <li>Ollama</li>
+              <li>Docker</li>
             </ul>
           </div>
+
           <div class="project-side">
+            <div class="project-number">02</div>
             <div class="project-links">
-              <a href="https://github.com/Ankit-Yadav-03/Streamguard" target="_blank" rel="noopener">Source on GitHub →</a>
+              <a
+                href="https://github.com/Ankit-Yadav-03/Streamguard"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Source on GitHub →</a>
             </div>
           </div>
+
         </article>
 
+
+        <!-- Krayadhi -->
         <article class="project">
+
           <div class="project-main">
             <div class="project-head">
-              <h3>Krayadhi</h3>
+              <div>
+                <h3>Krayadhi</h3>
+                <p class="project-kicker">AI procurement intelligence platform</p>
+              </div>
               <span class="badge badge-active">Hackathon build</span>
             </div>
+
             <p class="project-desc">
               AI procurement intelligence platform. An asynchronous vendor-discovery pipeline
               scrapes IndiaMART, TradeIndia, and Google Maps via Playwright, with structured LLM
               extraction (Gemini 2.5 Flash) for supplier ranking and ROI comparison.
             </p>
+
             <ul class="tags">
-              <li>FastAPI</li><li>aiosqlite</li><li>Playwright</li><li>Gemini API</li>
+              <li>FastAPI</li>
+              <li>aiosqlite</li>
+              <li>Playwright</li>
+              <li>Gemini API</li>
             </ul>
           </div>
+
           <div class="project-side">
+            <div class="project-number">03</div>
             <div class="project-links">
-              <a href="https://procureiq-vakx.onrender.com/" target="_blank" rel="noopener">Live demo →</a>
+              <a
+                href="https://procureiq-vakx.onrender.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Live demo →</a>
             </div>
           </div>
+
         </article>
 
+
+        <!-- Peakpilot -->
         <article class="project">
+
           <div class="project-main">
             <div class="project-head">
-              <h3>Peakpilot</h3>
+              <div>
+                <h3>Peakpilot</h3>
+                <p class="project-kicker">Industrial energy decision infrastructure</p>
+              </div>
               <span class="badge badge-active">Open source</span>
             </div>
+
             <p class="project-desc">
               Backend for a performance-contract system targeting high-tension industrial electricity
               consumers in Delhi NCR. A 14-step per-tick pipeline handles real-time load ingestion,
               DERC tariff calculation, and time-of-day load scheduling - tariff logic verified against
               primary BRPL/BYPL/TPDDL regulatory filings, not estimates.
             </p>
+
             <ul class="tags">
-              <li>FastAPI</li><li>WebSocket</li><li>Async Python</li><li>DERC tariff modeling</li>
+              <li>FastAPI</li>
+              <li>WebSocket</li>
+              <li>Async Python</li>
+              <li>DERC tariff modeling</li>
             </ul>
           </div>
+
           <div class="project-side">
+            <div class="project-number">04</div>
             <div class="project-links">
-              <a href="https://github.com/Ankit-Yadav-03/Peakpilot" target="_blank" rel="noopener">Source on GitHub →</a>
+              <a
+                href="https://github.com/Ankit-Yadav-03/Peakpilot"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Source on GitHub →</a>
             </div>
           </div>
+
         </article>
 
+
+        <!-- Receivables Copilot -->
         <article class="project">
+
           <div class="project-main">
             <div class="project-head">
-              <h3>Receivables Copilot</h3>
+              <div>
+                <h3>Receivables Copilot</h3>
+                <p class="project-kicker">Multi-tenant invoice follow-up automation</p>
+              </div>
               <span class="badge badge-dim">Independent build · completed</span>
             </div>
+
             <p class="project-desc">
               Multi-tenant SaaS for invoice follow-up automation. Built to learn production
               multi-tenancy properly - full auth, row-level security on Postgres, and a real
               split-stack deployment, not a single-tenant demo.
             </p>
+
             <ul class="tags">
-              <li>Next.js</li><li>FastAPI</li><li>NeonDB / Postgres</li><li>Row-level security</li>
+              <li>Next.js</li>
+              <li>FastAPI</li>
+              <li>NeonDB / Postgres</li>
+              <li>Row-level security</li>
             </ul>
           </div>
+
           <div class="project-side">
+            <div class="project-number">05</div>
             <div class="project-links">
-              <a href="https://receivables-copilot-frontend.vercel.app/" target="_blank" rel="noopener">Live demo →</a>
+              <a
+                href="https://receivables-copilot-frontend.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Live demo →</a>
             </div>
           </div>
+
         </article>
+
       </div>
     </section>
 
+
+    <!-- ─── Skills ─── -->
     <section id="skills" class="section reveal">
-      <h2>Skills</h2>
+      <div class="section-heading">
+        <span class="section-index">03</span>
+        <h2>Skills</h2>
+      </div>
+
       <div class="skills-grid">
+
         <div class="skill-group">
           <h4>Languages</h4>
           <ul class="skill-list">
@@ -295,23 +479,41 @@
             <li>Google Cloud Run</li>
           </ul>
         </div>
+
       </div>
     </section>
 
-    <section id="contact" class="section reveal">
-      <h2>Get in touch</h2>
-      <p class="about-text">Open to backend, Python, and AI-focused internships and freelance opportunities.</p>
+
+    <!-- ─── Contact ─── -->
+    <section id="contact" class="section section-contact reveal">
+      <div class="section-heading">
+        <span class="section-index">04</span>
+        <h2>Get in touch</h2>
+      </div>
+
+      <p class="about-text">
+        Open to backend, Python, and AI-focused internships and freelance opportunities.
+      </p>
+
       <div class="contact-links">
-        <a href="mailto:ankit.ydv989@gmail.com">ankit.ydv989@gmail.com</a>
-        <a href="https://github.com/ankit-yadav-03" target="_blank" rel="noopener">github.com/ankit-yadav-03</a>
-        <a href="https://www.linkedin.com/in/ankit-yadav-72014b378" target="_blank" rel="noopener">linkedin.com/in/ankit-yadav</a>
+        <a href="mailto:ankit.ydv989@gmail.com">ankit.ydv989@gmail.com <span>↗</span></a>
+        <a
+          href="https://github.com/ankit-yadav-03"
+          target="_blank"
+          rel="noopener noreferrer"
+        >github.com/ankit-yadav-03 <span>↗</span></a>
+        <a
+          href="https://www.linkedin.com/in/ankit-yadav-72014b378"
+          target="_blank"
+          rel="noopener noreferrer"
+        >linkedin.com/in/ankit-yadav <span>↗</span></a>
       </div>
     </section>
 
   </main>
 
   <footer>
-    <p>© 2026 Ankit Yadav</p>
+    <p>© <span id="year">2026</span> Ankit Yadav</p>
   </footer>
 
   <script src="script.js"></script>
