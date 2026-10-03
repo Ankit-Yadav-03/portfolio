@@ -736,8 +736,9 @@ h2 {
   align-items: center;
   gap: 8px;
   margin-bottom: 22px;
+  padding-top: 4px;
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 11px;
   color: var(--accent);
   letter-spacing: 0.12em;
   text-transform: uppercase;
