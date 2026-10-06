@@ -48,7 +48,7 @@
       <p class="role">
         I build <span class="hi">backend systems and AI infrastructure</span>
         for real-world problems - from multi-agent market systems to
-        production-oriented APIs and decision infrastructure.
+        APIs and decision infrastructure.
       </p>
 
       <div class="terminal" aria-label="Engineering profile terminal">
@@ -70,7 +70,7 @@
           <p class="out">backend dev · agentic AI · API design · system architecture · automation</p>
 
           <p><span class="prompt">$</span> status<span class="cursor"></span></p>
-          <p class="out">building systems, shipping projects, learning from production constraints</p>
+          <p class="out">building systems, shipping projects, learning from real constraints</p>
         </div>
       </div>
 
@@ -164,21 +164,24 @@
             <div class="project-head">
               <div>
                 <h3>NSE Trading Agent</h3>
-                <p class="project-kicker">Multi-agent market intelligence &amp; decision system</p>
+                <p class="project-kicker">Multi-agent LLM decision system, running in paper trading</p>
               </div>
               <span class="badge badge-amber">Private repo</span>
             </div>
 
             <p class="project-desc">
-              A multi-agent AI trading system for Indian equity markets (NSE/BSE), 
-              built from scratch with eight specialized agents spanning data ingestion, 
-              technical, fundamental and macro analysis, orchestration, risk, execution, 
-              and review. Agents communicate through direct async HTTP calls coordinated by
-              FastAPI, with ChromaDB providing RAG memory. Gemini handles inference with a 
-              local Ollama fallback, using quota-aware call skipping, malformed-JSON retries.
-              A 5-year market-data pipeline covers 50 stocks with corporate-action adjustments,
-              while risk safeguards enforce transaction costs, stop-losses, position/sector limits, 
-              and earnings blackouts.
+              A multi-agent LLM system for Indian equities (NSE), built from scratch in Python.
+              Eight agents cover data ingestion, technical, fundamental and macro analysis,
+              orchestration, risk, execution and review. They are coordinated by FastAPI, with
+              ChromaDB for RAG memory. Gemini handles inference with a local Ollama fallback,
+              quota-aware call skipping and JSON retries. Risk rules (stop-losses, position and
+              sector limits, earnings blackouts, trading costs) sit outside the LLM.
+            </p>
+
+            <p class="project-desc">
+              Status: paper trading on a 5-year, corporate-action-adjusted dataset of 50 stocks.
+              Three baseline strategies failed my pre-set backtest criteria, so there is no proven
+              edge yet. Next: an evaluation harness for the agents and a clean holdout set.
             </p>
 
             <div class="architecture">
@@ -197,13 +200,13 @@
               <div class="architecture-node">
                 <span>03</span>
                 <strong>Orchestration</strong>
-                <small>risk · execution · review</small>
+                <small>LLM decision · RAG memory</small>
               </div>
               <span class="architecture-arrow">→</span>
               <div class="architecture-node">
                 <span>04</span>
-                <strong>Decision</strong>
-                <small>controlled output</small>
+                <strong>Risk &amp; Execution</strong>
+                <small>hard rules · paper orders · review</small>
               </div>
             </div>
 
